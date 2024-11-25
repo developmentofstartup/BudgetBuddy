@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/128.515ab8da.chunk.js","mappings":"sJAAe,SAASA,IACpB,OACIC,EAAAA,EAAAA,KAAAC,EAAAA,SAAA,CAAAC,SAAE,YAEV,C","sources":["pages/Greeting.js"],"sourcesContent":["export default function Greeting() {\r\n    return(\r\n        <>Greeting</>\r\n    );\r\n}"],"names":["Greeting","_jsx","_Fragment","children"],"sourceRoot":""}

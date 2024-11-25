@@ -1,8 +1,12 @@
 {
   "files": {
-    "main.css": "/BudgetBuddy/static/css/main.af31f262.css",
-    "main.js": "/BudgetBuddy/static/js/main.329f7b45.js",
+    "main.css": "/BudgetBuddy/static/css/main.3e942977.css",
+    "main.js": "/BudgetBuddy/static/js/main.8b0efe06.js",
+    "static/js/444.92712a04.chunk.js": "/BudgetBuddy/static/js/444.92712a04.chunk.js",
+    "static/js/128.515ab8da.chunk.js": "/BudgetBuddy/static/js/128.515ab8da.chunk.js",
+    "static/js/479.8b1cf2ae.chunk.js": "/BudgetBuddy/static/js/479.8b1cf2ae.chunk.js",
     "static/js/453.63117624.chunk.js": "/BudgetBuddy/static/js/453.63117624.chunk.js",
+    "static/js/903.f464acf2.chunk.js": "/BudgetBuddy/static/js/903.f464acf2.chunk.js",
     "static/media/lost-in-bills.jpg": "/BudgetBuddy/static/media/lost-in-bills.c40ce24fab964928e112.jpg",
     "static/media/managing.jpg": "/BudgetBuddy/static/media/managing.afab7807a2efe41117b7.jpg",
     "static/media/achivement.jpg": "/BudgetBuddy/static/media/achivement.4065567040a784b936fb.jpg",
@@ -13,12 +17,16 @@
     "static/media/slick.ttf": "/BudgetBuddy/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/BudgetBuddy/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/BudgetBuddy/index.html",
-    "main.af31f262.css.map": "/BudgetBuddy/static/css/main.af31f262.css.map",
-    "main.329f7b45.js.map": "/BudgetBuddy/static/js/main.329f7b45.js.map",
-    "453.63117624.chunk.js.map": "/BudgetBuddy/static/js/453.63117624.chunk.js.map"
+    "main.3e942977.css.map": "/BudgetBuddy/static/css/main.3e942977.css.map",
+    "main.8b0efe06.js.map": "/BudgetBuddy/static/js/main.8b0efe06.js.map",
+    "444.92712a04.chunk.js.map": "/BudgetBuddy/static/js/444.92712a04.chunk.js.map",
+    "128.515ab8da.chunk.js.map": "/BudgetBuddy/static/js/128.515ab8da.chunk.js.map",
+    "479.8b1cf2ae.chunk.js.map": "/BudgetBuddy/static/js/479.8b1cf2ae.chunk.js.map",
+    "453.63117624.chunk.js.map": "/BudgetBuddy/static/js/453.63117624.chunk.js.map",
+    "903.f464acf2.chunk.js.map": "/BudgetBuddy/static/js/903.f464acf2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.af31f262.css",
-    "static/js/main.329f7b45.js"
+    "static/css/main.3e942977.css",
+    "static/js/main.8b0efe06.js"
   ]
 }
