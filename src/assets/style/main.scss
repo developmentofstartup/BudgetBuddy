@@ -28,6 +28,10 @@ $px37_9: calc(1rem + 21.9px);
 $px28_43: calc(1rem + 12.43px);
 $transition: all .24s ease;
 /* fonts */
+root {
+    max-width: 100%;
+    overflow: hidden;
+}
 h4, .h4,
 h5, .h5,
 h6, .h6 {

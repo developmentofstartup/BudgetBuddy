@@ -4,7 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useFormik } from "formik";
 import * as Yup from 'yup';
 import FormField from './FormField';
+import { useDispatch } from "react-redux";
+import { seUserAuthorized } from "../features/mainSlice";
+import { useNavigate } from "react-router-dom";
+
 export default function AuthForm({ isLogin }) { // isLogin defines if it's a login form or register
+    const dispath = useDispatch();
+    const navigate = useNavigate();
     const initialValues = isLogin
         ? { email: '', password: '' }
         : { fullName: '', email: '', password: '', confirmPassword: '' };
@@ -36,7 +42,15 @@ export default function AuthForm({ isLogin }) { // isLogin defines if it's a log
         initialValues: initialValues,
         validationSchema: validationSchema,
         onSubmit: (values) => {
-            console.log(values)
+            // console.log(values);
+            dispath(seUserAuthorized(true));
+            if(isLogin) {
+                // navigate to dashboard
+                navigate('/dashboard');
+            } else {
+                // navigate to newUser page
+                navigate('/greeting');
+            }
         }
     });
    

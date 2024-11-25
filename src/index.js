@@ -1,8 +1,7 @@
 // deafult
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
 // custom plugins
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,11 +12,53 @@ import "slick-carousel/slick/slick-theme.css";
 import './assets/style/main.scss';
 import store from './store/data';
 import { Provider } from 'react-redux';
+import React, { Suspense, lazy } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Layout from './components/Layout';
+import { imgs } from './content/home';
+
+const Home = lazy(() => import('./pages/Home'));
+const Greeting = lazy(() => import('./pages/Greeting'));
+const Dashboard = lazy(() => import('./pages/Dashboard'));
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />, // This will render Nav, Footer, and dynamically loaded content
+    children: [
+      {
+        index: true,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Home imgs={imgs}/>
+          </Suspense>
+        ),
+      },
+      {
+        path: "dashboard",
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Dashboard />
+          </Suspense>
+        ),
+      },
+      {
+        path: "greeting",
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Greeting />
+          </Suspense>
+        ),
+      },
+    ],
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
     <React.StrictMode>
       <Provider store={store}>
-        <App />
+        <RouterProvider router={router} />;
       </Provider>
     </React.StrictMode>
 
