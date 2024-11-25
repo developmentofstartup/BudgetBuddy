@@ -28,6 +28,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        path: "BudgetBuddy",
         element: (
           <Suspense fallback={<div>Loading...</div>}>
             <Home imgs={imgs}/>
