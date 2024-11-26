@@ -1,6 +1,5 @@
 // deafult
 import ReactDOM from 'react-dom/client';
-import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 // custom plugins
@@ -23,12 +22,12 @@ const Dashboard = lazy(() => import('./pages/Dashboard'));
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/BudgetBuddy",
     element: <Layout />, // This will render Nav, Footer, and dynamically loaded content
     children: [
       {
         index: true,
-        path: "BudgetBuddy",
+        path: "home",
         element: (
           <Suspense fallback={<div>Loading...</div>}>
             <Home imgs={imgs}/>

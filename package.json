@@ -1,6 +1,6 @@
 {
   "name": "budget-buddy",
-  "homepage": "https://developmentofstartup.github.io/BudgetBuddy/",
+  "homepage": "https://developmentofstartup.github.io/BudgetBuddy/home",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

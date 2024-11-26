@@ -1,5 +1,5 @@
 import Nav from '../components/Nav';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { imgs } from '../content/home';
 import Slider from "react-slick";
 import React, {
@@ -11,11 +11,12 @@ import { TypeAnimation } from 'react-type-animation';
 import FlipCard from '../components/FlipCard';
 import { useMediaQuery } from 'react-responsive';
 import useChangeOnResize from '../hooks/useChangeOnResize';
-
+import { seUserAuthorized } from '../features/mainSlice';
 export default function Home() {
     // useEffect(() => {
     //     console.log(userAuthorized);
     // }, [userAuthorized]);
+    const dispatch = useDispatch();
     const sliderRef = useRef(null);
     const navbarHeight = useSelector(state => state.main.navHeight);
     const isTablet = useMediaQuery({ query: '(max-width: 992px)' });
@@ -29,6 +30,10 @@ export default function Home() {
 
     useEffect(() => {
         updateBannerTextHeights();
+        
+        // display nav in non-auth version on each home render
+        dispatch(seUserAuthorized(false));
+        // eslint-disable-next-line
     }, []);
     useChangeOnResize(updateBannerTextHeights)
 
