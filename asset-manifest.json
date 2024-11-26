@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/BudgetBuddy/home/static/css/main.ad768c10.css",
-    "main.js": "/BudgetBuddy/home/static/js/main.305d312a.js",
+    "main.js": "/BudgetBuddy/home/static/js/main.3c45134b.js",
     "static/js/444.63c7354e.chunk.js": "/BudgetBuddy/home/static/js/444.63c7354e.chunk.js",
     "static/js/128.515ab8da.chunk.js": "/BudgetBuddy/home/static/js/128.515ab8da.chunk.js",
     "static/js/479.8b1cf2ae.chunk.js": "/BudgetBuddy/home/static/js/479.8b1cf2ae.chunk.js",
@@ -18,7 +18,7 @@
     "static/media/slick.woff": "/BudgetBuddy/home/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/BudgetBuddy/home/index.html",
     "main.ad768c10.css.map": "/BudgetBuddy/home/static/css/main.ad768c10.css.map",
-    "main.305d312a.js.map": "/BudgetBuddy/home/static/js/main.305d312a.js.map",
+    "main.3c45134b.js.map": "/BudgetBuddy/home/static/js/main.3c45134b.js.map",
     "444.63c7354e.chunk.js.map": "/BudgetBuddy/home/static/js/444.63c7354e.chunk.js.map",
     "128.515ab8da.chunk.js.map": "/BudgetBuddy/home/static/js/128.515ab8da.chunk.js.map",
     "479.8b1cf2ae.chunk.js.map": "/BudgetBuddy/home/static/js/479.8b1cf2ae.chunk.js.map",
@@ -27,6 +27,6 @@
   },
   "entrypoints": [
     "static/css/main.ad768c10.css",
-    "static/js/main.305d312a.js"
+    "static/js/main.3c45134b.js"
   ]
 }
