@@ -28,9 +28,21 @@ $px37_9: calc(1rem + 21.9px);
 $px28_43: calc(1rem + 12.43px);
 $transition: all .24s ease;
 /* fonts */
-root {
+#root {
     max-width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+/* Meyer's Reset CSS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input {
+    min-height: 48px;
+    min-width: 48px;
 }
 h4, .h4,
 h5, .h5,
@@ -62,6 +74,7 @@ h6, .h6 { font-size: $px21_33; }
 .shadow_Tmain { text-shadow: $mainTShadow }
 .shadow_drop { box-shadow: $dropShadow; }
 .shadow_main { box-shadow: $mainShadow; }
+.shadow_m3Light { box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15), 0px 2px 6px rgba(0, 0, 0, 0.1); }
 /* padding & margin */
 .form_p {
     padding-inline: $px24;
@@ -70,10 +83,21 @@ h6, .h6 { font-size: $px21_33; }
 }
 .px_18px { padding-inline: $px18; }
 .px_36px { padding-inline: $px36; }
+.px_24px { padding-inline: $px24; }
 .py_12px { padding-block: $px12; }
+.p_12px { padding: $px12; }
+.py_24px { padding-block: $px24; }
 .pt_12px { padding-top: $px12; }
+.pt_18px { padding-top: $px18; }
+.pt_36px { padding-top: $px36; }
+.pt_48px { padding-top: $px48; }
 .pb_12px { padding-bottom: $px12; }
+.pb_24px { padding-bottom: $px24; }
 .my_12px { margin-block: $px12; }
+.mb_12px { margin-bottom: $px12; }
+.mt_36px { margin-top: $px36; }
+.mb_18px { margin-bottom: $px18; }
+.pb_18px { padding-bottom: $px18; }
 /* others */
 .minh-inherit { min-height: inherit; }
 .transition_default { transition: $transition; }
@@ -205,3 +229,24 @@ h6, .h6 { font-size: $px21_33; }
 .bg_main { background: $main; }
 .bg_white {background-color: white;}
 .bg_mainGradient { background: $mainGradient; }
+
+.w_fit { width: fit-content; }
+
+
+
+.step-indicators {
+    display: flex;
+    gap: 1rem;
+}
+.step {
+width: 2rem;
+height: 3px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: $light;
+}
+.step.active {
+background-color: $main;
+color: var(--white);
+}

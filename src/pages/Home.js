@@ -1,4 +1,3 @@
-import Nav from '../components/Nav';
 import { useSelector, useDispatch } from 'react-redux';
 import { imgs } from '../content/home';
 import Slider from "react-slick";
@@ -12,6 +11,8 @@ import FlipCard from '../components/FlipCard';
 import { useMediaQuery } from 'react-responsive';
 import useChangeOnResize from '../hooks/useChangeOnResize';
 import { seUserAuthorized } from '../features/mainSlice';
+import '../assets/style/full-screen-page.scss';
+
 export default function Home() {
     // useEffect(() => {
     //     console.log(userAuthorized);
@@ -47,74 +48,67 @@ export default function Home() {
         if(sliderRef.current) sliderRef.current.slickGoTo(index); // Go to a specific slide
     };
     return (
-        <section
-            // eslint-disable-next-line
-            style={{ height:  '100vh' }}
-            className='d-flex flex-column position-relative overflow-hidden'
-        >
-            <Nav />
-            <div
-            className='container-xxl pb_12px px_36px d-flex flex-column justify-content-center h-100'
-            style={{ paddingTop: navbarHeight }}>
-            <div className='row h-100'>
-                <div className='col-lg-9'>
-                    <div className='container-fluid px-0'>
-                        <div className='row flex-md-row-reverse align-items-lg-center'>
-                            <div className='col-lg-8'>
-                                <Slider {...settings} ref={sliderRef}>
-                                    {imgs.map((item, index) => (
-                                        <div key={index}>
-                                            <div>
-                                                <img
-                                                    className='w-100 object-fit-cover object_top'
-                                                    src={item.img}
-                                                    alt={item.text}
-                                                    style={{ height: isTablet ? `calc(100vh - ${navbarHeight + 24 + (bannerTextHeights[0] || 0)}px)` : '100%' }}
-                                                />
+        <section className='d-flex flex-column position-relative overflow-hidden'>
+            <div className='container-xxl pb_12px px_36px d-flex flex-column justify-content-center h-100'>
+                <div className='row h-100'>
+                    <div className='col-lg-9'>
+                        <div className='container-fluid px-0'>
+                            <div className='row flex-md-row-reverse align-items-lg-center'>
+                                <div className='col-lg-8'>
+                                    <Slider {...settings} ref={sliderRef}>
+                                        {imgs.map((item, index) => (
+                                            <div key={index}>
+                                                <div>
+                                                    <img
+                                                        className='w-100 object-fit-cover object_top'
+                                                        src={item.img}
+                                                        alt={item.text}
+                                                        style={{ height: isTablet ? `calc(100vh - ${navbarHeight + 24 + (bannerTextHeights[0] || 0)}px)` : '100%' }}
+                                                    />
+                                                </div>
+                                                <div className="d-flex align-items-center position-absolute z_index_-1 hidden"
+                                                    ref={el => bannerTextRefs.current[index] = el}>
+                                                    <h4 className='c_darkBlue shadow_Tmain'>{item.text} <span className='c_main text-capitalize'>{item.highlited}</span></h4>
+                                                </div>
                                             </div>
-                                            <div className="d-flex align-items-center position-absolute z_index_-1 hidden"
-                                                ref={el => bannerTextRefs.current[index] = el}>
-                                                <h4 className='c_darkBlue shadow_Tmain'>{item.text} <span className='c_main text-capitalize'>{item.highlited}</span></h4>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </Slider>
-                            </div>
-                            <div
-                                className='col-lg-4'
-                                style={{ height: `${bannerTextHeights[0]}px` }}>
-                                <TypeAnimation
-                                    sequence={[
-                                        () => goToSlide(0),
-                                        imgs[0].text,
-                                        2000,
-                                        () => goToSlide(1),
-                                        imgs[1].text,
-                                        2000,
-                                        () => goToSlide(2),
-                                        imgs[2].text,
-                                        2000,
+                                        ))}
+                                    </Slider>
+                                </div>
+                                <div
+                                    className='col-lg-4'
+                                    style={{ height: `${bannerTextHeights[0]}px` }}>
+                                    <TypeAnimation
+                                        sequence={[
+                                            () => goToSlide(0),
+                                            imgs[0].text,
+                                            2000,
+                                            () => goToSlide(1),
+                                            imgs[1].text,
+                                            2000,
+                                            () => goToSlide(2),
+                                            imgs[2].text,
+                                            2000,
 
-                                    ]}
-                                    wrapper="h4"
-                                    speed={50}
-                                    repeat={Infinity}
-                                    className={`c_darkBlue shadow_Tmain ${isTablet && 'text-center'}`}
-                                />
+                                        ]}
+                                        wrapper="h4"
+                                        speed={50}
+                                        repeat={Infinity}
+                                        className={`c_darkBlue shadow_Tmain ${isTablet && 'text-center'}`}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
+                    {isTablet ?
+                        ''
+                        : (
+                            <div className="login_form_container col-lg-3 d-lg-flex align-items-center">
+                                <FlipCard />
+                            </div>
+                        )
+                    }
                 </div>
-                {isTablet ?
-                    ''
-                    : (
-                        <div className="login_form_container col-lg-3 d-lg-flex align-items-center">
-                            <FlipCard />
-                        </div>
-                    )
-                }
             </div>
-        </div>
         </section>
     );
 }

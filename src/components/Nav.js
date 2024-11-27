@@ -20,13 +20,13 @@ export default function Nav() {
     if (navbarRef.current) {
       dispatch(setNavHeight(navbarRef.current.offsetHeight));
     }
-  }, [navbarRef, dispatch]);
+    // eslint-disable-next-line
+  }, []);
     return (
       <nav
         ref={navbarRef}
-        className="w-100 position-absolute top-0 pt_12px z_index_1"
-    >
-      <div className='container-xxl'>
+        className="w-100 position-fixed top-0 z_index_1">
+      <div className='container-xxl pt_12px'>
           {userAuthorized?
             <>authorized nav</>
             : (

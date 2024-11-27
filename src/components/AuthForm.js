@@ -59,7 +59,7 @@ export default function AuthForm({ isLogin }) { // isLogin defines if it's a log
             onSubmit={formik.handleSubmit}>
             <div className='input_group d-flex flex-column gap_18px'>
                 {!isLogin && <FormField name='fullName' type='text' placeholder='Full Name' autoComplete='name' formik={formik}></FormField>}
-                <FormField name='email' type='text' placeholder='Email' autoComplete={isLogin ? 'email' : 'new-email'} formik={formik}></FormField>
+                <FormField name='email' type='text' placeholder='Email' autoComplete={'email'} formik={formik}></FormField>
                 <FormField name='password' type='password' placeholder='Password' autoComplete={isLogin ? 'current-password' : 'new-password'}formik={formik}></FormField>
                 {!isLogin && <FormField name='confirmPassword' type='password' placeholder='Confirm Password' autoComplete='new-password' formik={formik}></FormField>}
             </div>
