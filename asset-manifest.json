@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/BudgetBuddy/static/css/main.32434fbe.css",
-    "main.js": "/BudgetBuddy/static/js/main.688fba18.js",
-    "static/js/444.63c7354e.chunk.js": "/BudgetBuddy/static/js/444.63c7354e.chunk.js",
-    "static/js/128.515ab8da.chunk.js": "/BudgetBuddy/static/js/128.515ab8da.chunk.js",
+    "main.css": "/BudgetBuddy/static/css/main.dc10534f.css",
+    "main.js": "/BudgetBuddy/static/js/main.f4eec2fd.js",
+    "static/css/714.c8d08aa9.chunk.css": "/BudgetBuddy/static/css/714.c8d08aa9.chunk.css",
+    "static/js/714.3d862e8e.chunk.js": "/BudgetBuddy/static/js/714.3d862e8e.chunk.js",
+    "static/js/128.0b0d6f70.chunk.js": "/BudgetBuddy/static/js/128.0b0d6f70.chunk.js",
     "static/js/479.8b1cf2ae.chunk.js": "/BudgetBuddy/static/js/479.8b1cf2ae.chunk.js",
     "static/js/453.63117624.chunk.js": "/BudgetBuddy/static/js/453.63117624.chunk.js",
     "static/js/903.f464acf2.chunk.js": "/BudgetBuddy/static/js/903.f464acf2.chunk.js",
@@ -17,16 +18,17 @@
     "static/media/slick.ttf": "/BudgetBuddy/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/BudgetBuddy/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/BudgetBuddy/index.html",
-    "main.32434fbe.css.map": "/BudgetBuddy/static/css/main.32434fbe.css.map",
-    "main.688fba18.js.map": "/BudgetBuddy/static/js/main.688fba18.js.map",
-    "444.63c7354e.chunk.js.map": "/BudgetBuddy/static/js/444.63c7354e.chunk.js.map",
-    "128.515ab8da.chunk.js.map": "/BudgetBuddy/static/js/128.515ab8da.chunk.js.map",
+    "main.dc10534f.css.map": "/BudgetBuddy/static/css/main.dc10534f.css.map",
+    "main.f4eec2fd.js.map": "/BudgetBuddy/static/js/main.f4eec2fd.js.map",
+    "714.c8d08aa9.chunk.css.map": "/BudgetBuddy/static/css/714.c8d08aa9.chunk.css.map",
+    "714.3d862e8e.chunk.js.map": "/BudgetBuddy/static/js/714.3d862e8e.chunk.js.map",
+    "128.0b0d6f70.chunk.js.map": "/BudgetBuddy/static/js/128.0b0d6f70.chunk.js.map",
     "479.8b1cf2ae.chunk.js.map": "/BudgetBuddy/static/js/479.8b1cf2ae.chunk.js.map",
     "453.63117624.chunk.js.map": "/BudgetBuddy/static/js/453.63117624.chunk.js.map",
     "903.f464acf2.chunk.js.map": "/BudgetBuddy/static/js/903.f464acf2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.32434fbe.css",
-    "static/js/main.688fba18.js"
+    "static/css/main.dc10534f.css",
+    "static/js/main.f4eec2fd.js"
   ]
 }
